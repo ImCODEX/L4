@@ -26,4 +26,12 @@ public class Teacher extends Person{
         Teacher teacher = (Teacher) o;
         return Objects.equals(getFirstName(), teacher.getFirstName()) && Objects.equals(getLastName(), teacher.getLastName());
     }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "firstName= " + getFirstName() +
+                " lastName= " + getLastName() +
+                '}';
+    }
 }

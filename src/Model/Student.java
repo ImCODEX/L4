@@ -50,11 +50,11 @@ public class Student extends Person{
     @Override
     public String toString() {
         return "Student{" +
-                "studentId=" + studentId +
-                "studentName=" + getFirstName() +
-                "studentLastName=" + getLastName() +
-                ", totalCredits=" + totalCredits +
-                ", enrolledCourses=" + enrolledCourses +
+                " studentId= " + studentId +
+                " studentName= " + getFirstName() +
+                " studentLastName= " + getLastName() +
+                ", totalCredits= " + totalCredits +
+                ", enrolledCourses= " + enrolledCourses +
                 '}';
     }
 }

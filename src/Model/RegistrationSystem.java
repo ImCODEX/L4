@@ -1,5 +1,7 @@
 package Model;
 
+//Commented until further notice
+/*
 import Model.Course;
 import Model.Student;
 import Model.Teacher;
@@ -46,3 +48,4 @@ public class RegistrationSystem {
     }
 
 }
+*/

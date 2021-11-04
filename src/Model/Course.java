@@ -74,9 +74,6 @@ public class Course {
         return "Course{" +
                 "name='" + name + '\'' +
                 ", teacher=" + teacher +
-                ", maxEnrollment=" + maxEnrollment +
-                ", studentsEnrolled=" + studentsEnrolled +
-                ", credits=" + credits +
-                '}';
+                ", maxEnrollment=" + maxEnrollment;
     }
 }
