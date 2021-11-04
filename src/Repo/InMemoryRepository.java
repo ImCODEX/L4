@@ -5,6 +5,11 @@ package Repo;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Generic Class that implements ICrudRepository
+ * @param <T>: T can be any object
+ */
+
 public abstract class InMemoryRepository<T> implements ICrudRepository<T> {
 
 

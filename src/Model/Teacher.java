@@ -3,9 +3,19 @@ package Model;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Teacher Class
+ */
+
 public class Teacher extends Person{
     private List<Course> courses;
 
+    /**
+     * Teacher Constructor
+     * @param firstName: String
+     * @param lastName: String
+     * @param courses_: List<Course>
+     */
     public Teacher(String firstName, String lastName, List<Course> courses_) {
         super(firstName, lastName);
         courses = courses_;
@@ -19,6 +29,12 @@ public class Teacher extends Person{
         this.courses = courses;
     }
 
+    /**
+     * Equals method for comparison
+     * Used especially in update() method from InMemoryRepository.java
+     * @param o: another Teacher Object
+     * @return: boolean
+     */
     @Override
     public boolean equals(Object o){
         if (this == o ) return true;

@@ -6,12 +6,25 @@ import Model.Teacher;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Course Class
+ */
+
 public class Course {
     private String name;
     private Teacher teacher;
     private int maxEnrollment;
     private List<Student> studentsEnrolled;
     private int credits;
+
+    /**
+     * Course Class
+     * @param name: String
+     * @param teacher: Teacher Object
+     * @param maxEnrollment: int - maximum number of Student's
+     * @param studentsEnrolled: List<Student>
+     * @param credits: int
+     */
 
     public Course(String name, Teacher teacher, int maxEnrollment, List<Student> studentsEnrolled, int credits) {
         this.name = name;
@@ -61,6 +74,12 @@ public class Course {
         this.credits = credits;
     }
 
+    /**
+     * Equals method for comparison
+     * Used especially in update() method from InMemoryRepository.java
+     * @param o: another Teacher Object
+     * @return: boolean
+     */
     @Override
     public boolean equals(Object o){
         if (this == o ) return true;

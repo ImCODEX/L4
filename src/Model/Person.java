@@ -1,9 +1,17 @@
 package Model;
 
+/**
+ * Abstract class for Teacher, Student
+ */
 public abstract class Person {
     private String firstName;
     private String lastName;
 
+    /**
+     * Teacher Constructor
+     * @param firstName: String
+     * @param lastName: String
+     */
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;

@@ -2,17 +2,29 @@ package Model;
 
 import java.util.List;
 
+/**
+ * Student Class
+ */
+
 public class Student extends Person{
     private long studentId;
     private int totalCredits;
     private List<Course> enrolledCourses;
+
+    /**
+     * Student Constructor
+     * @param firstName: String
+     * @param lastName: String
+     * @param studentId_: int - unique identifier for Student
+     * @param totalCredits_: sum of all Courses credits
+     * @param enrolledCourses_: List<Course>
+     */
 
     public Student(String firstName, String lastName, long studentId_, int totalCredits_, List<Course> enrolledCourses_) {
         super(firstName, lastName);
         studentId = studentId_;
         totalCredits = totalCredits_;
         enrolledCourses = enrolledCourses_;
-
     }
 
     public long getStudentId() {
@@ -39,6 +51,12 @@ public class Student extends Person{
         this.enrolledCourses = enrolledCourses;
     }
 
+    /**
+     * Equals method for comparison
+     * Used especially in update() method from InMemoryRepository.java
+     * @param o: another Student Object
+     * @return: boolean
+     */
     @Override
     public boolean equals(Object o){
         if (this == o ) return true;

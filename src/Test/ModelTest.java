@@ -13,6 +13,10 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ * Test Class for Model
+ */
+
 public class ModelTest {
     private Course courseBazeDeDate;
     private Course courseStructuriDeDate;
@@ -22,7 +26,13 @@ public class ModelTest {
     private Student studentCodrut;
     private Teacher teacherDorel;
     private Teacher teacherDor;
-    
+
+    /**
+     * Setup method
+     * instantiates various Teacher, Student, Course Objects
+     * also instantiates various ArrayLists for complete
+     * declaration of Teacher, Student, Course Objects
+     */
     @BeforeEach
     public void setup(){
         teacherDorel = new Teacher("Dorel", "Bob", new ArrayList<>());
@@ -73,6 +83,10 @@ public class ModelTest {
                 
     }
 
+    /**
+     * Test for toString() methods
+     * of Teacher, Student, Course Objects
+     */
     @Test
     public void printAll(){
         System.out.println(studentRazvan.toString());
@@ -81,6 +95,10 @@ public class ModelTest {
         System.out.println(studentCodrut.toString());
     }
 
+    /**
+     * Test for good insertion of ArrayList<Course> in Student Class
+     * and good functionality of Class Student getter
+     */
     @Test
     public void testEnrolledCourses(){
         List<Course> studentRazvanCourses = new ArrayList<>();
@@ -93,6 +111,11 @@ public class ModelTest {
 
     }
 
+
+    /**
+     * Test for good insertion of ArrayList<Course> in Teacher Class
+     * and good functionality of Class Teacher getter
+     */
     @Test
     public void testListOfCourses(){
         List<Course> teacherDorelCourses = new ArrayList<>();
@@ -100,6 +123,9 @@ public class ModelTest {
         assertEquals(teacherDorel.getCourses(), teacherDorelCourses);
     }
 
+    /**
+     * Test for good insertion of Teacher in Course Class
+     */
     @Test
     public void testCoursesTeacher(){
         assertEquals(courseBazeDeDate.getTeacher(), teacherDorel);
